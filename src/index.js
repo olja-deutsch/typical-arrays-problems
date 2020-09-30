@@ -27,12 +27,23 @@ exports.max = function max (array) {
     });
 
     return maxElement;
-    
+
   } else {
     return 0;
   };
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if (arguments.length && array.length) {
+    let sum = 0;
+
+    array.forEach(element => {
+      sum += element;
+    });
+
+    return sum / array.length;
+    
+  } else {
+    return 0;
+  };
 }
